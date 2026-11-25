@@ -1,0 +1,153 @@
+:root {
+  --bg: #f5f8ff;
+  --ink: #222;
+  --brand: #009688;
+  --brand2: #003366;
+  --card: #ffffff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
+
+header{
+  background:var(--brand2);
+  color:white;
+  padding:1rem;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-right:15px;
+  font-weight:bold;
+}
+
+nav a:hover,
+nav a.active{
+  text-decoration:underline;
+}
+
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+.card{
+  background:black;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
+  margin-bottom:20px;
+}
+
+.hero{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.profile-pic{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid var(--brand);
+}
+
+img{
+  max-width:100%;
+  border-radius:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.btn{
+  display:inline-block;
+  padding:10px 20px;
+  text-decoration:none;
+  background:var(--brand);
+  color:white;
+  border-radius:999px;
+  font-weight:bold;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+table, th, td{
+  border:1px solid #ddd;
+}
+
+th, td{
+  padding:10px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+}
+
+img{
+  height:auto;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  transition:.2s;
+}
+
+.links{
+  list-style:none;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+input, textarea{
+  width:100%;
+  padding:8px;
+  border:1px solid #999;
+  border-radius:8px;
+  font:inherit;
+}
+
+button.btn{
+  border:0;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+progress{
+  width:200px;
+  max-width:100%;
+}
+
+/* Bonus: dark mode follows the device setting */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14181f;
+    --ink:#f1f1f1;
+    --card:#1f2530;
+  }
+  .card{ box-shadow:0 2px 8px rgba(0,0,0,.6); }
+  table, th, td{ border-color:#3a4256; }
+  input, textarea{ background:#14181f; color:#f1f1f1; border-color:#666; }
+}
